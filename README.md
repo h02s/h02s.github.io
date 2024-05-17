@@ -52,7 +52,7 @@
         <h1>Welcome to the HOSS webste!</h1>
     </header>
     <section class="content">
-        <h2>درباره من</h2>
+        <h2>About me</h2>
         <p>I'm begginer in code world and love league :) .</p>
         <button onclick="displayDate()">2024</button>
         <p id="date"></p>
