@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وب‌سایت من</title>
+    <title>HOSS website</title>
     <style>
         body {
             font-family: 'Tahoma', sans-serif;
@@ -49,16 +49,16 @@
 </head>
 <body>
     <header>
-        <h1>به وب‌سایت من خوش آمدید!</h1>
+        <h1>Welcome to the HOSS webste!</h1>
     </header>
     <section class="content">
         <h2>درباره من</h2>
-        <p>این یک پاراگراف معرفی درباره من است. شما می‌توانید اطلاعات بیشتری در اینجا قرار دهید.</p>
-        <button onclick="displayDate()">نمایش تاریخ</button>
+        <p>I'm begginer in code world and love league :) .</p>
+        <button onclick="displayDate()">2024</button>
         <p id="date"></p>
     </section>
     <footer>
-        <p>حق نشر © 2024 توسط من</p>
+        <p>xdd</p>
     </footer>
     <script>
         function displayDate() {
