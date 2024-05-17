@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
@@ -49,7 +49,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the HOSS webste!</h1>
+        <h1>Welcome to the HOSS website!</h1>
     </header>
     <section class="content">
         <h2>About me</h2>
