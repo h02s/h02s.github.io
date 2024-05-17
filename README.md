@@ -1,21 +1,69 @@
-# h02s.github.io
 <!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحه من در GitHub</title>
+    <title>وب‌سایت من</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section.content {
+            padding: 20px;
+            margin: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>به وب‌سایت من خوش آمدید!</h1>
     </header>
-    <section>
+    <section class="content">
         <h2>درباره من</h2>
         <p>این یک پاراگراف معرفی درباره من است. شما می‌توانید اطلاعات بیشتری در اینجا قرار دهید.</p>
+        <button onclick="displayDate()">نمایش تاریخ</button>
+        <p id="date"></p>
     </section>
     <footer>
         <p>حق نشر © 2024 توسط من</p>
     </footer>
+    <script>
+        function displayDate() {
+            document.getElementById("date").innerHTML = Date();
+        }
+    </script>
 </body>
 </html>
