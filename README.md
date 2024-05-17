@@ -67,7 +67,7 @@
             <h2>About</h2>
             <p>This section is about me and my work.</p>
         </section>
-        <section id="contact">
+        <section id="op.gg">
             <h2>Contact</h2>
             <p>Here's how you can reach me.</p>
         </section>
