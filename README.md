@@ -1,68 +1,85 @@
-
-<html lang="fa">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOSS website</title>
+    <title>My Professional GitHub Page</title>
     <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #f4f4f4;
+            --font-color: #fff;
+        }
+        [data-theme="light"] {
+            --primary-color: #f4f4f4;
+            --secondary-color: #333;
+            --font-color: #000;
+        }
         body {
-            font-family: 'Tahoma', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--font-color);
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
+        header, footer {
+            background-color: var(--secondary-color);
+            color: var(--font-color);
+            padding: 1rem;
             text-align: center;
         }
-        section.content {
-            padding: 20px;
-            margin: 15px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        button {
-            background-color: #008CBA;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
+        nav a {
+            color: var(--font-color);
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            margin: 0 1rem;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .theme-switcher {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
             cursor: pointer;
         }
     </style>
 </head>
-<body>
+<body data-theme="dark">
     <header>
-        <h1>Welcome to the HOSS website!</h1>
+        <h1>Welcome to My Professional GitHub Page</h1>
     </header>
-    <section class="content">
-        <h2>About me</h2>
-        <p>I'm begginer in code world and love league :) .</p>
-        <button onclick="displayDate()">2024</button>
-        <p id="date"></p>
-    </section>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="content">
+        <section id="home">
+            <h2>Home</h2>
+            <p>This is the home section of the page.</p>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>This section is about me and my work.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Here's how you can reach me.</p>
+        </section>
+    </div>
     <footer>
-        <p>xdd</p>
+        <p>Copyright © 2024 by Me</p>
     </footer>
+    <div class="theme-switcher" onclick="switchTheme()">Switch Theme</div>
     <script>
-        function displayDate() {
-            document.getElementById("date").innerHTML = Date();
+        function switchTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            document.body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
         }
     </script>
 </body>
