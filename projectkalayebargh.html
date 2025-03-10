@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه کالای برق</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            background: #222;
+            padding: 10px 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .cart {
+            cursor: pointer;
+        }
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('sale-banner.jpg') no-repeat center center/cover;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .search-box {
+            margin: 20px auto;
+            width: 50%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #222;
+            border-radius: 25px;
+            outline: none;
+        }
+        .categories, .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .category, .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .category:hover, .product:hover {
+            transform: scale(1.1);
+        }
+        .cart-box {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">فروشگاه کالای برق</div>
+    <div class="header">
+        <div>منو | ورود</div>
+        <div class="cart" onclick="toggleCart()">🛒 سبد خرید</div>
+    </div>
+    <div class="cart-box" id="cartBox">
+        <p>سبد خرید شما خالی است.</p>
+    </div>
+    <div class="banner"></div>
+    <input type="text" class="search-box" placeholder="جستجوی محصول...">
+    <div class="categories">
+        <div class="category"><img src="cable-icon.png" alt="کابل و سیم"><span>کابل و سیم</span></div>
+        <div class="category"><img src="lamp-icon.png" alt="لامپ و روشنایی"><span>لامپ و روشنایی</span></div>
+        <div class="category"><img src="switch-icon.png" alt="کلید و پریز"><span>کلید و پریز</span></div>
+        <div class="category"><img src="panel-icon.png" alt="تابلو برق"><span>تابلو برق</span></div>
+    </div>
+    <h2>محصولات ویژه</h2>
+    <div class="products">
+        <div class="product" onclick="addToCart('محصول 1', 100000)"><img src="product1.png" alt="محصول 1"><span>محصول 1 - 100,000 تومان</span></div>
+        <div class="product" onclick="addToCart('محصول 2', 120000)"><img src="product2.png" alt="محصول 2"><span>محصول 2 - 120,000 تومان</span></div>
+        <div class="product" onclick="addToCart('محصول 3', 150000)"><img src="product3.png" alt="محصول 3"><span>محصول 3 - 150,000 تومان</span></div>
+    </div>
+    <div class="footer">
+        <p>تماس با ما | درباره ما | شبکه‌های اجتماعی</p>
+    </div>
+    <script>
+        let cart = [];
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+        }
+        function updateCart() {
+            let cartBox = document.getElementById('cartBox');
+            if (cart.length === 0) {
+                cartBox.innerHTML = '<p>سبد خرید شما خالی است.</p>';
+            } else {
+                cartBox.innerHTML = cart.map(item => `<p>${item.name} - ${item.price} تومان</p>`).join('') + '<button onclick="clearCart()">حذف همه</button>';
+            }
+            cartBox.style.display = 'block';
+        }
+        function toggleCart() {
+            let cartBox = document.getElementById('cartBox');
+            cartBox.style.display = cartBox.style.display === 'block' ? 'none' : 'block';
+        }
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+    </script>
+</body>
+</html>
