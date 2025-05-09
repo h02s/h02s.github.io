@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -471,7 +471,7 @@
         <div class="header-content">
             <div class="logo">
                 <i class="fas fa-code"></i> 
-                <span class="language-switch-text">Developer Resume</span>
+                <span class="language-switch-text">رزومه </span>
             </div>
             <div class="controls">
                 <div class="theme-switch" id="themeSwitch">
@@ -489,10 +489,10 @@
 
     <div class="container">
         <div class="banner">
-            <h1 class="language-content en">Hi, I'm Hossein Dehghani</h1>
-            <h1 class="language-content es" style="display: none;">Hola, Soy John Doe</h1>
-            <div class="terminal-text language-content en">Full Stack Developer & Security Specialist</div>
-            <div class="terminal-text language-content es" style="display: none;">Desarrollador Full Stack & Especialista en Seguridad</div>
+            <h1 class="language-content en">Hi, I'm John Doe</h1>
+            <h1 class="language-content fa" style="display: none;">سلام من حسین دهقانی ام!</h1>
+            <div class="terminal-text language-content en">Junior Developer</div>
+            <div class="terminal-text language-content fa" style="display: none;">برنامه نویس تازه‌کار</div>
         </div>
 
         <div class="terminal-box">
@@ -507,8 +507,8 @@
                 <span class="terminal-cursor">█</span>
             </div>
             <div class="terminal-output">
-                <span class="language-content en">> JavaScript, React, Node.js, Python, Cyber Security, AWS...</span>
-                <span class="language-content es" style="display: none;">> JavaScript, React, Node.js, Python, Seguridad Informática, AWS...</span>
+                <span class="language-content en">> Python,Git,Github,Linux...</span>
+                <span class="language-content fa" style="display: none;">> Python,Git,Github,Linux...</span>
             </div>
         </div>
 
@@ -548,8 +548,8 @@
                 <span class="language-content es" style="display: none;">Sobre Mí</span>
             </h2>
             <div class="card">
-                <p class="language-content en">I am a passionate Full Stack Developer with 5+ years of experience in building secure, scalable web applications. With a background in cybersecurity, I bring a unique perspective to development, ensuring that applications are not only functional but also secure.</p>
-                <p class="language-content es" style="display: none;">Soy un Desarrollador Full Stack apasionado con más de 5 años de experiencia en la creación de aplicaciones web seguras y escalables. Con experiencia en ciberseguridad, aporto una perspectiva única al desarrollo, asegurando que las aplicaciones no solo sean funcionales sino también seguras.</p>
+                <p class="language-content en"></p>
+                <p class="language-content es" style="display: none;"></p>
             </div>
             
             <h2 class="section-title">
@@ -567,10 +567,10 @@
                 </div>
                 <div class="education-item">
                     <div class="date">2019 - 2021</div>
-                    <h3 class="language-content en">Master's in Cybersecurity</h3>
-                    <h3 class="language-content es" style="display: none;">Maestría en Ciberseguridad</h3>
-                    <p class="language-content en">Tech Institute</p>
-                    <p class="language-content es" style="display: none;">Instituto Tecnológico</p>
+                    <h3 class="language-content en"></h3>
+                    <h3 class="language-content es" style="display: none;"></h3>
+                    <p class="language-content en"></p>
+                    <p class="language-content es" style="display: none;"></p>
                 </div>
             </div>
 
@@ -588,7 +588,7 @@
                     <li class="language-content en">CompTIA Security+</li>
                     <li class="language-content es" style="display: none;">CompTIA Security+</li>
                 </ul>
-</div>
+            </div>
         </div>
 
         <!-- Experience Tab -->
