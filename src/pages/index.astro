@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const articles = (await getCollection("articles", ({data}) => !data.draft))
+  .sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout>
+  <div class="container">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Software Developer · Writer · Learner</div>
+        <h1>I learn things.<br/><span>Then I write them down.</span></h1>
+        <p>A personal space for technical notes, experiments, projects, and the ideas I’m trying to understand — one article at a time.</p>
+        <div class="actions">
+          <a class="btn primary" href="#writing">Read my notes</a>
+          <a class="btn" href="/about">About me →</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="terminal">
+          <div>~/h02s <strong>$ whoami</strong></div>
+          <br/>
+          <div>→ software developer</div>
+          <div>→ backend / web</div>
+          <div>→ linux & infrastructure</div>
+          <div>→ learning in public</div>
+          <br/>
+          <div><strong>$ echo $CURRENT_STATUS</strong></div>
+          <div>building · learning · writing</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="section-head">
+        <h2>Latest writing</h2>
+        <a href="/articles">All articles →</a>
+      </div>
+      <div class="grid">
+        {articles.slice(0, 6).map((article) => (
+          <a class="card" href={`/articles/${article.id}/`}>
+            <div class="meta">{article.data.category}</div>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.description}</p>
+            <div class="tags">
+              {article.data.tags.slice(0,3).map(tag => <span class="tag">{tag}</span>)}
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head"><h2>Selected projects</h2><a href="https://github.com/h02s" target="_blank" rel="noreferrer">GitHub →</a></div>
+      <div class="grid">
+        <a class="card project" href="https://github.com/h02s" target="_blank" rel="noreferrer"><span class="num">01</span><div><h3>Open-source experiments</h3><p>Small tools, learning projects and experiments that document how I build.</p></div></a>
+        <a class="card project" href="/about"><span class="num">02</span><div><h3>Learning in public</h3><p>Notes connecting software engineering concepts with practical experiments.</p></div></a>
+        <a class="card project" href="/articles"><span class="num">03</span><div><h3>Technical writing</h3><p>Short explanations of things I read, test, build, and finally understand.</p></div></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="about-box">
+        <div class="eyebrow">Now</div>
+        <h2>Building a stronger engineering foundation.</h2>
+        <p>I’m using this site as a living record of what I learn: backend development, Linux, infrastructure, software architecture, and practical programming.</p>
+        <a class="btn" href="/about">More about me →</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
