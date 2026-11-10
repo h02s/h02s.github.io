@@ -88,7 +88,7 @@ const articles = (await getCollection("articles", ({ data }) => !data.draft))
         </div>
         <div class="writing-list">
           {articles.slice(0, 3).map((article) => (
-            <a class="writing-item" href={\`/articles/\${article.id}/\`}>
+            <a class="writing-item" href={`/articles/${article.id}/`}>
               <span class="writing-category">{article.data.category}</span>
               <span class="writing-title">{article.data.title}</span>
               <span class="writing-arrow">↗</span>
