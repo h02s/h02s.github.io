@@ -1,23 +1,38 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="About — h02s">
+<BaseLayout
+  title="About — Hoss"
+  description="Learn more about Hoss, a computer engineer interested in AI, image processing, and software engineering."
+>
   <div class="container">
-    <section class="profile">
-      <div class="eyebrow">About</div>
-      <h1>Hi, I'm Hoss.</h1>
-      <p>I’m a software developer interested in building useful things and understanding how they work underneath.</p>
-      <p>This website is deliberately simple: it is my personal knowledge base, technical notebook and portfolio in one place. Instead of listing every technology I have touched, I want the projects and writing here to show how I think, learn and build.</p>
-      <div class="socials">
-        <a href="https://github.com/h02s" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="mailto:contact@hdfmy.ir">Email</a>
+    <section class="about-hero">
+      <div class="eyebrow">ABOUT ME</div>
+      <h1>Hi, I'm Hoss<span class="accent-period">.</span></h1>
+      <p class="about-lead">Computer engineer, graduate student, and software developer interested in the intersection of intelligent systems and practical engineering.</p>
+      <div class="about-actions">
+        <a class="btn primary" href="mailto:contact@hdfmy.ir">Contact me ↗</a>
+        <a class="btn" href="https://github.com/h02s" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
     </section>
-    <section>
-      <div class="split">
-        <div class="about-box"><div class="eyebrow">Focus</div><h2>Backend & Web</h2><p>PHP, Laravel, Python, Django, APIs and practical application architecture.</p></div>
-        <div class="about-box"><div class="eyebrow">Infrastructure</div><h2>Linux & Containers</h2><p>Linux, Docker, Incus, networking and self-hosted development environments.</p></div>
-      </div>
+
+    <section class="about-content-grid">
+      <article class="about-main">
+        <div class="eyebrow">MY JOURNEY</div>
+        <h2>Learning by understanding, building, and testing.</h2>
+        <p>My background is in computer engineering, and I'm continuing my studies in artificial intelligence and robotics. I'm especially interested in machine learning, digital image processing, and the practical systems that make software useful and dependable.</p>
+        <p>Alongside academic work, I build web applications and explore developer tools, Linux environments, and open-source software. I value clear explanations, reproducible experiments, and projects that demonstrate more than a list of technologies.</p>
+        <p>This website is my evolving portfolio and technical notebook — a place to share selected work, document what I learn, and make it easier to connect with people working on similar problems.</p>
+      </article>
+      <aside class="about-side">
+        <div class="about-box"><div class="eyebrow">EDUCATION</div><h3>Computer Engineering</h3><p>Graduate studies focused on Artificial Intelligence & Robotics.</p></div>
+        <div class="about-box"><div class="eyebrow">RESEARCH INTERESTS</div><ul><li>Machine Learning</li><li>Digital Image Processing</li><li>Computer Vision</li><li>AI for practical applications</li></ul></div>
+        <div class="about-box"><div class="eyebrow">ENGINEERING INTERESTS</div><ul><li>Backend & Web Development</li><li>Linux & Open Source</li><li>Systems and Networking</li><li>Self-hosted tools</li></ul></div>
+      </aside>
+    </section>
+    <section class="about-bottom">
+      <div><div class="eyebrow">CURRENT PRINCIPLE</div><h2>Make it work. Understand why. Make it better.</h2></div>
+      <a class="text-link" href="https://github.com/h02s?tab=repositories" target="_blank" rel="noreferrer">Explore my GitHub ↗</a>
     </section>
   </div>
 </BaseLayout>
